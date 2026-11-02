@@ -1,0 +1,372 @@
+
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ek Prem Patra Tumhare Naam ❤️</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Tiro+Devanagari+Hindi&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #190d13;
+    color: #3b2525;
+    font-family: 'Tiro Devanagari Hindi', serif;
+    min-height: 100vh;
+    padding: 45px 15px;
+    overflow-x: hidden;
+}
+
+/* Background */
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background:
+        radial-gradient(circle at 20% 20%, #652b422c, transparent 35%),
+        radial-gradient(circle at 80% 80%, #8a3c4525, transparent 40%);
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* Floating hearts */
+
+.heart {
+    position: fixed;
+    bottom: -30px;
+    color: #c77a87;
+    opacity: 0;
+    animation: float 12s linear infinite;
+    pointer-events: none;
+    z-index: 0;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+    20% { opacity: 0.4; }
+    80% { opacity: 0.3; }
+    100% {
+        transform: translateY(-110vh) rotate(35deg);
+        opacity: 0;
+    }
+}
+
+/* Main letter */
+
+.container {
+    max-width: 850px;
+    margin: auto;
+    position: relative;
+    z-index: 1;
+}
+
+.paper {
+    background: #f6eddd;
+    padding: 65px 75px;
+    border: 1px solid #d5bfa3;
+    box-shadow: 0 20px 80px #00000075;
+    position: relative;
+    animation: appear 1.5s ease;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.paper::before {
+    content: "";
+    position: absolute;
+    inset: 12px;
+    border: 1px solid #c8aa8c;
+    pointer-events: none;
+}
+
+.top-symbol {
+    text-align: center;
+    color: #9b4557;
+    font-size: 27px;
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(30px, 5vw, 48px);
+    text-align: center;
+    color: #702e40;
+    font-weight: 400;
+    margin-bottom: 12px;
+    line-height: 1.25;
+}
+
+.subtitle {
+    text-align: center;
+    color: #99705e;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 15px;
+    letter-spacing: 2px;
+    margin-bottom: 35px;
+}
+
+.divider {
+    width: 100px;
+    height: 1px;
+    background: #ae7b72;
+    margin: 0 auto 38px;
+}
+
+.letter p {
+    font-size: 17px;
+    line-height: 2.15;
+    margin-bottom: 25px;
+    text-align: justify;
+    color: #402e2a;
+}
+
+.highlight {
+    color: #8b3549;
+    font-weight: bold;
+}
+
+.poem {
+    margin: 45px 0 30px;
+    padding: 30px 20px;
+    background: #eadbc8;
+    border-left: 3px solid #984c5b;
+    text-align: center;
+    position: relative;
+}
+
+.poem p {
+    text-align: center;
+    font-size: 19px;
+    line-height: 2.2;
+    color: #702e40;
+    margin: 0;
+}
+
+.poem-title {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    color: #9b5960;
+    text-align: center;
+    margin-bottom: 18px;
+    font-size: 17px;
+}
+
+.signature {
+    text-align: right;
+    margin-top: 45px;
+    color: #7b3948;
+    font-size: 19px;
+}
+
+.signature span {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 25px;
+    display: block;
+    margin-top: 10px;
+}
+
+.footer {
+    text-align: center;
+    color: #c99aa3;
+    font-family: 'Playfair Display', serif;
+    font-size: 13px;
+    letter-spacing: 2px;
+    margin-top: 30px;
+}
+
+/* Mobile */
+
+@media(max-width: 600px) {
+    body {
+        padding: 20px 10px;
+    }
+
+    .paper {
+        padding: 48px 25px;
+    }
+
+    .paper::before {
+        inset: 7px;
+    }
+
+    .letter p {
+        font-size: 15px;
+        line-height: 2;
+        text-align: left;
+        margin-bottom: 22px;
+    }
+
+    .poem p {
+        font-size: 16px;
+    }
+
+    .signature {
+        font-size: 16px;
+    }
+}
+
+/* Scroll animation */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="paper">
+
+<div class="top-symbol">♥</div>
+
+<h1>एक प्रेम पत्र तुम्हारे नाम</h1>
+
+<div class="subtitle">A letter from my heart to yours</div>
+
+<div class="divider"></div>
+
+<div class="letter">
+
+<p class="reveal">
+मेरा प्रेम पत्र पढ़ना उतना ही कठिन होगा, जितनी कठिनाई आपको मुझसे प्रेम करने में होती है।
+</p>
+
+<p class="reveal">
+मैं इतिहास पढ़ सकता हूँ, राजनीति और फिलॉसफी पर घंटों बहस कर सकता हूँ, दुनिया की तमाम प्रेम कहानियों को समझने की कोशिश कर सकता हूँ, लेकिन जब बात अपने प्रेम को शब्दों में व्यक्त करने की आती है, तो मेरी समझ, सारा ज्ञान शून्य पड़ जाता है। इसका ये मतलब नहीं है कि मैं प्रेम नहीं करता, बल्कि मैं अपने प्रेम को शब्दों में बता पाने में असमर्थ हूँ।
+</p>
+
+<p class="reveal">
+मैं तुम्हारे लिए अपने प्रेम की परिभाषा ढूँढ़ रहा हूँ। हजारों प्रेम कहानियाँ सुनने-पढ़ने के बाद मुझे असहजता महसूस होती है। अभी तक के इतिहास में लोग प्रेम का नाम देकर एक घर बसा लेते हैं, दो बच्चे पैदा कर लेते हैं, अगर शाहजहाँ है तो एक महल बनवा देता है। मुझे इस तरह का प्रेम कभी प्रभावित नहीं कर सका।
+</p>
+
+<p class="reveal">
+प्रेम अगर ज़िंदगी में आए तो इस रूप में आए कि एक मूर्ख को महाकवि कालिदास बना दे, प्रेम मैरी क्यूरी जैसा हो, जहाँ साथ में नोबेल पुरस्कार मिले, प्रेम ज्योतिबा-सावित्रीबाई फुले जैसा हो, जो सामाजिक क्रांति के बीज बो दे।
+</p>
+
+<p class="reveal">
+मैं हम दोनों के लिए किसी ऐसी ही प्रेम कहानी को ढूँढ़ रहा हूँ, जहाँ प्रेम बस एक-दूसरे के हो जाने भर का नाम न हो, जहाँ प्रेम एक-दूसरे को बेहतर बनाने का माध्यम बने, जो आप हमेशा से बनती आई हो।
+</p>
+
+<p class="reveal">
+कई बार मैं सोचता हूँ, उन्नीस साल की उम्र में इतनी संवेदनशीलता कहाँ से आई होगी? तुमने ये सब कहाँ से सीखा होगा? मेरी भावनाओं को समझना, मेरी बातों को धैर्य से सुनना और परेशान होने पर यह एहसास दिलाना कि सब ठीक हो जाएगा।
+</p>
+
+<p class="reveal">
+जब भी कभी मेरा खुद पर विश्वास डगमगाता है, तुम्हारा ये कहना कि <span class="highlight">केशव, तुम नहीं करोगे तो और कौन कर सकता है, ब्रो</span>, ये सुनकर मुझे दुनिया फ़तह करने की हिम्मत आ जाती है।
+</p>
+
+<p class="reveal">
+तुमसे मिलने के बाद अपनी पर्सनैलिटी, ड्रेसिंग सेंस में भी चेंजेस देख पा रहा हूँ। मैं कितना क्या कर पाया आपके लिए, नहीं पता, लेकिन मैं माफ़ी चाहता हूँ अपने बेवजह या छोटी-छोटी वजहों के चलते मेरे गुस्से का शिकार बनीं आप।
+</p>
+
+<p class="reveal">
+आपको प्रेम में सबसे पहले खुद को थोड़ा बदलकर एक बेहतर इंसान के रूप में ढालने का वादा ही दे सकता हूँ मैं। और मैं जिस प्रेम कहानी को ढूँढ़ रहा हूँ, उसकी शुरुआत हमारे बीच होनी शुरू हो गई है, जहाँ एक-दूसरे को बेहतर बनाने का माध्यम बन रहे हैं हम।
+</p>
+
+<p class="reveal">
+और मैं इसके लिए आपको धन्यवाद नहीं बोलूँगा और मैं इसके लिए आपको थैंक यू नहीं बोलूँगा, क्योंकि मुझसे प्रेम करने का आपका फ़र्ज़ है ये।
+</p>
+
+<div class="divider"></div>
+
+<div class="poem reveal">
+
+<div class="poem-title">और अंत में मेरी ये कविता...</div>
+
+<p>
+जैसे राधा की यादों में बाँसुरी बजाया करता था श्याम,<br>
+वैसे ही मैं भी तेरी यादों में कविता लिखता हूँ, मेरी जान।
+<br><br>
+राधा कृष्ण की हो न सकी, अफसोस हुआ यह जान,<br>
+पर अपने पिता से कह देना, मेरे ही हाथों करे तेरा कन्यादान।
+</p>
+
+</div>
+
+<div class="signature reveal">
+सिर्फ तुम्हारा,
+<span>केशव ❤️</span>
+</div>
+
+</div>
+</div>
+
+<div class="footer">
+MADE WITH LOVE · FOREVER & ALWAYS
+</div>
+
+</div>
+
+<script>
+
+// Floating hearts
+function createHeart() {
+    const heart = document.createElement("div");
+    heart.className = "heart";
+    heart.innerHTML = "♥";
+
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = (12 + Math.random() * 20) + "px";
+    heart.style.animationDuration = (8 + Math.random() * 8) + "s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    }, 16000);
+}
+
+setInterval(createHeart, 1200);
+
+// Reveal text while scrolling
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+        }
+    });
+}, {
+    threshold: 0.12
+});
+
+document.querySelectorAll(".reveal").forEach(element => {
+    observer.observe(element);
+});
+
+</script>
+
+</body>
+</html>
